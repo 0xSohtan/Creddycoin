@@ -77,23 +77,29 @@
 
 .landingscreen {
   z-index: 10;
-  background-image: url('../images/press-room.png');
-  background-position: 0 0;
-  background-size: cover;
+  background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url('../images/b9ebda725eb4f1b0b708c4dc9bbd21a2.jpg');
+  background-position: 0 0, 0 0;
+  background-size: auto, cover;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   height: 100svh;
+  padding-top: 60px;
   display: flex;
   position: relative;
 }
 
 .landing-heading {
-  color: #000;
+  color: #fff;
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: #000;
+  text-shadow: 10px 10px #000;
+  transform-style: preserve-3d;
   margin-top: 0;
   margin-bottom: 0;
   font-size: 200px;
   font-style: normal;
   line-height: 100%;
+  transform: rotateX(-7deg)rotateY(28deg)rotateZ(0);
 }
 
 .marquee {
@@ -275,6 +281,8 @@
   text-align: center;
   margin-top: 0;
   margin-bottom: 0;
+  font-size: 70px;
+  line-height: 100%;
 }
 
 .image-section-2 {
@@ -491,11 +499,18 @@
 
 @media screen and (max-width: 479px) {
   .landingscreen {
-    background-position: 80%;
+    background-image: url('../images/b9ebda725eb4f1b0b708c4dc9bbd21a2.jpg');
+    background-position: 50%;
+    background-size: cover;
     justify-content: center;
-    align-items: center;
-    height: 120svh;
+    align-items: flex-start;
+    height: 100svh;
+    padding-top: 120px;
     display: flex;
+  }
+
+  .landing-heading {
+    font-size: 80px;
   }
 
   .marquee-grid {
@@ -512,6 +527,10 @@
 
   .image-section {
     height: 80svh;
+  }
+
+  .heading-2 {
+    font-size: 50px;
   }
 
   .image-section-2 {
@@ -569,7 +588,7 @@
     padding-left: 20px;
     padding-right: 20px;
     font-size: 30px;
-    display: none;
+    display: block;
     transform: rotate(9deg);
   }
 }
