@@ -450,6 +450,7 @@
   padding: 20px 40px;
   font-size: 50px;
   line-height: 100%;
+  display: none;
   position: absolute;
 }
 
@@ -491,6 +492,9 @@
 @media screen and (max-width: 479px) {
   .landingscreen {
     background-position: 80%;
+    justify-content: center;
+    align-items: center;
+    height: 120svh;
     display: flex;
   }
 
@@ -506,7 +510,14 @@
     display: none;
   }
 
-  .image-section, .image-section-2 {
+  .image-section {
+    height: 80svh;
+  }
+
+  .image-section-2 {
+    background-image: linear-gradient(0deg, #302722, rgba(0, 0, 0, 0) 50%), linear-gradient(#302722, rgba(0, 0, 0, 0) 50%), url('../images/boss.jpeg');
+    background-position: 0 0, 0 0, 50%;
+    background-size: auto, auto, cover;
     height: 80svh;
   }
 
@@ -522,6 +533,10 @@
   .howtobuy-block {
     margin: 11px;
     padding: 10px;
+  }
+
+  .htb-image {
+    width: 70px;
   }
 
   .htb-mega-block {
@@ -545,6 +560,17 @@
 
   .sticky-image-mobile {
     display: block;
+  }
+
+  .landing-button {
+    outline-offset: 0px;
+    background-color: #4d7d4d;
+    outline: 5px solid #000;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 30px;
+    display: block;
+    transform: rotate(9deg);
   }
 }
 
